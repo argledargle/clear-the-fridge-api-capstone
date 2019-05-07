@@ -155,13 +155,7 @@ function watchShowHealthInfoButton() {
 	});
 };
 
-function watchHomeButton() {
-	$('h1').on('click', event => {
-		location.reload();
-	});
-};
 
-$(watchHomeButton);
 $(watchShowIngredientsButton);
 $(watchShowHealthInfoButton);
 $(watchSearchForm);
