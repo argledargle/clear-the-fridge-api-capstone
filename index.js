@@ -155,7 +155,6 @@ function watchShowHealthInfoButton() {
 	});
 };
 
-
 $(watchShowIngredientsButton);
 $(watchShowHealthInfoButton);
 $(watchSearchForm);
