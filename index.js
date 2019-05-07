@@ -16,10 +16,13 @@ function getRecipes(query, limit=10) {
     const params = {
         'q': query,
         'app_id': appId,
-        'app_key': appKey
+        'app_key': appKey,
+        'to': limit
     };
 
     const queryString = formatQueryParams(params)
+// delete this after resolving issues
+    console.log(queryString)
 
 // add functionality here to append allergies and diet to 
 // queryString from list if selected
@@ -34,7 +37,7 @@ function getRecipes(query, limit=10) {
 
             throw new Error (response.statusText);
         })
-        .then(responseJason => displayResults(responseJson))
+        .then(responseJson => displayResults(responseJson))
         .catch(err=>{
             console.log(err);
             $('#js-error-message').text(`Search limit exceeded: 5 searches per minute. ${err.message}.`);
@@ -42,11 +45,12 @@ function getRecipes(query, limit=10) {
 };
 
 function displayResults(responseJson) {
-    $('#results-list'),empty();
+    $('#results-list').empty();
     $('#js-error-message').empty();
     $('.site-preview').addClass('hidden');
+    console.log(responseJson)
 
-    if (response.hits.length ===0 ) {
+    if (responseJson.hits.length ===0 ) {
         $('#js-error-message').text(`No one wants to eat that... Try something else!`);
     } else {
         for (let i = 0; i < responseJson.hits.length; i++) {
