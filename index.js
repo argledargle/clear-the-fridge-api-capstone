@@ -9,7 +9,6 @@ function formatQueryParams(params) {
     .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(params[key])}`)
 
     return queryItems.join('&')
-    console.log (queryItems.join('&'));
 };
 
 function getRecipes(query, limit=10) {
@@ -21,13 +20,16 @@ function getRecipes(query, limit=10) {
     };
 
     const queryString = formatQueryParams(params)
-// delete this after resolving issues
-    console.log(queryString)
+
 
 // add functionality here to append allergies and diet to 
 // queryString from list if selected
 
-    const url  = edamamSearchUrl + '?' + queryString;
+
+const url  = edamamSearchUrl + '?' + queryString;
+
+// delete this after resolving issues
+console.log(url)
 
     fetch (url)
         .then(response =>{
