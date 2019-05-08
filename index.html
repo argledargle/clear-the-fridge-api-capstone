@@ -17,25 +17,16 @@
     <form>
       <input type="text" placeholder="Chicken, rice" id="search-term" required>
       <input type="submit" value ="Search">
-      <input type="button" value = "Allergies">
         <section id="allergies">
-          <ul>
-            <li><input type="checkbox" id="balanced" name="balanced" value="balanced">Balanced</li>
-            <li><input type="checkbox" name="high-fiber" value="high-fiber">High-Fiber</li>
-            <li><input type="checkbox" name="high-protein" value="high-protein">High-Protein</li>
-            <li><input type="checkbox" name="low-carb" value="low-carb">Low-Carb</li>
-            <li><input type="checkbox" name="low-fat" value="low-fat">Low-Fat</li>
-            <li><input type="checkbox" name="low-sodium" value="low-sodium">Low-Sodium</li>
-          </ul>
-        </section>
-      <input type="button" value = "Diet">
-        <section id="diet">
-          <ul>
-            <li><input type="checkbox" name="dairy-free" value="dairy-free">Dairy-free</li>
-            <li><input type="checkbox" name="egg-free" value="egg-free">Egg-free</li>
-            <li><input type="checkbox" name="fish-free" value="fish-free">Fish-free</li>
-            <li><input type="checkbox" name="pork-free	" value="pork-free">Pork-free</li>
-          </ul>
+            <select class="diet">
+                <option value="" selected>Select</option>
+                <option value="balanced">Balanced</option>
+                <option value="high-fiber">High-Fiber</option>
+                <option value="high-protein">High-Protein</option>
+                <option value="low-carb">Low-Carb</option>
+                <option value="low-fat">Low-Fat</option>
+                <option value="low-sodium">Low-Sodium</option>
+              </select>
         </section>
         </form>
         <p id="js-error-message" class="error-message"></p>

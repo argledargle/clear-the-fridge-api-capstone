@@ -11,14 +11,21 @@ function formatQueryParams(params) {
     return queryItems.join('&')
 };
 
-function getRecipes(query, limit=10) {
+function getRecipes(searchTerm, limit=10, diet) {
+
     const params = {
-        'q': query,
+        'q': searchTerm,
         'app_id': appId,
         'app_key': appKey,
-        'to': limit
+        'to': limit,
+    // inputBalanced, inputHighFiber, inputHighProtein, inputLowCarb, inputLowFat, inputLowSodium
+    };
+    if (diet!='') {
+        params.diet=diet;
     };
 
+    console.log(params)
+//    balanced high-fiber high-protein low-carb low-fat low-sodium
     const queryString = formatQueryParams(params)
 
 
@@ -123,9 +130,14 @@ function watchSearchForm() {
 	$('form').submit(event => {
 		event.preventDefault();
 		const searchTerm = $('#search-term').val();
-		const limit = $('#js-max-results').val();
-		getRecipes(searchTerm, limit);
-		$('header').css('margin-top', '2vh');
+        const limit = $('#js-max-results').val();
+        
+        let diet = $(".diet").val();
+
+        console.log(diet)
+
+
+		getRecipes(searchTerm, limit, diet);
 	});
 };
 
