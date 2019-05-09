@@ -117,7 +117,10 @@ function displayResults(responseJson) {
 								${dietInfo}
 							</ul>
 						</section>
-					</div>
+                    </div>
+                    <div class="grocery">
+                    <p>Where's my grocery store?</p>
+                  </div>
 				</li>`
 			);
 		};
