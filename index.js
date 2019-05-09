@@ -136,7 +136,9 @@ function watchSearchForm() {
         const limit = $('#js-max-results').val();
         
         let diet = $(".diet").val();
-
+        if (searchTerm == "") {
+            alert("please fill out text")
+        }
         console.log(diet)
 
 
