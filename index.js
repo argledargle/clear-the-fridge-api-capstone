@@ -119,7 +119,7 @@ function displayResults(responseJson) {
 						</section>
                     </div>
                     <div id="grocery">
-                    <button onclick="on()">Where's my grocery store?</button>
+                   <button onclick="on()">Where's my nearest grocery store?</button>
                   </div>
 				</li>`
 			);
@@ -177,16 +177,13 @@ function watchShowHealthInfoButton() {
 };
 
 function on() {
-    document.getElementById("overlay").style.display = "block";
-  }
+    document.getElementById("overlay").style.display = "flex";
+  };
   
   function off() {
     document.getElementById("overlay").style.display = "none";
-  }
+  };
   
-
-// <iframe width="600" height="450" frameborder="0" style="border:0"src="https://www.google.com/maps/embed/v1/search?q=grocery%20stores&key=AIzaSyCFudFIZM7kJmn9IgGBsnSrrL3Bp5oEMB4" allowfullscreen></iframe>
-
 
 $(watchShowIngredientsButton);
 $(watchShowHealthInfoButton);
