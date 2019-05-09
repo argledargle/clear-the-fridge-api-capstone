@@ -92,8 +92,8 @@ function displayResults(responseJson) {
             $('#results-list').append(
 				`<li role="listitem">
 					<div id="search-result" class="search-result">
-						<a href="${responseJson.hits[i].recipe.url}" role="link"><img src="${responseJson.hits[i].recipe.image}" class="recipe-img" alt="Image of recipe"></a>
-						<a href="${responseJson.hits[i].recipe.url}" role="link" class="recipe-label-a"><p class="recipe-label">${responseJson.hits[i].recipe.label}</p></a>
+						<a href="${responseJson.hits[i].recipe.url}" role="link" target="_blank"><img src="${responseJson.hits[i].recipe.image}" class="recipe-img" alt="Image of recipe"></a>
+						<a href="${responseJson.hits[i].recipe.url}" role="link" class="recipe-label-a" target="_blank"><p class="recipe-label">${responseJson.hits[i].recipe.label}</p></a>
 						<p class="recipe-source">${responseJson.hits[i].recipe.source}</p>
 						
 						<div class="expand-buttons">
@@ -119,7 +119,7 @@ function displayResults(responseJson) {
 						</section>
                     </div>
                     <div id="grocery">
-                    <p>Where's my grocery store?</p>
+                    <button onclick="on()">Where's my grocery store?</button>
                   </div>
 				</li>`
 			);
@@ -188,7 +188,6 @@ function on() {
 // <iframe width="600" height="450" frameborder="0" style="border:0"src="https://www.google.com/maps/embed/v1/search?q=grocery%20stores&key=AIzaSyCFudFIZM7kJmn9IgGBsnSrrL3Bp5oEMB4" allowfullscreen></iframe>
 
 
-$(watchGroceryButton);
 $(watchShowIngredientsButton);
 $(watchShowHealthInfoButton);
 $(watchSearchForm);
