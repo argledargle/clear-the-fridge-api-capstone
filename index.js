@@ -97,8 +97,8 @@ function displayResults(responseJson) {
 						<p class="recipe-source">${responseJson.hits[i].recipe.source}</p>
 						
 						<div class="expand-buttons">
-							<button type="button" id="show-ingredients" class="show-ingredients" data-ingredients=${i}" role="button">Ingredients +</button>
-							<button type="button" id="show-health-info" class="show-health-info" data-health-info=${i}" role="button">Diet Info +</button>
+							<button type="button" id="show-ingredients" class="show-ingredients" data-ingredients=${i}" role="button">Ingredients</button>
+							<button type="button" id="show-health-info" class="show-health-info" data-health-info=${i}" role="button">Diet Info</button>
 						</div>
 					</div>
 					<div class="ingredients-container">
@@ -118,7 +118,7 @@ function displayResults(responseJson) {
 							</ul>
 						</section>
                     </div>
-                    <div class="grocery">
+                    <div id="grocery">
                     <p>Where's my grocery store?</p>
                   </div>
 				</li>`
@@ -176,6 +176,19 @@ function watchShowHealthInfoButton() {
 	});
 };
 
+function on() {
+    document.getElementById("overlay").style.display = "block";
+  }
+  
+  function off() {
+    document.getElementById("overlay").style.display = "none";
+  }
+  
+
+// <iframe width="600" height="450" frameborder="0" style="border:0"src="https://www.google.com/maps/embed/v1/search?q=grocery%20stores&key=AIzaSyCFudFIZM7kJmn9IgGBsnSrrL3Bp5oEMB4" allowfullscreen></iframe>
+
+
+$(watchGroceryButton);
 $(watchShowIngredientsButton);
 $(watchShowHealthInfoButton);
 $(watchSearchForm);
