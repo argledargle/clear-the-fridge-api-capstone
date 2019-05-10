@@ -17,6 +17,16 @@ body {
     width: 50%;
   }
 
+legend {
+    padding-bottom: 5px;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 h1 {
     font-family: 'Permanent Marker', cursive;
     margin-bottom: 0px;
@@ -26,7 +36,7 @@ p, button, footer, input, option {
     font-family: 'Lato', sans-serif;
 }
 
-button, .recipe-source, form, #search-result, legend, div, #listitem {
+button, .recipe-source, form, #search-result, legend, div, #listitem, img {
     border-radius: 6px;
 }
 
