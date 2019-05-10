@@ -36,7 +36,16 @@ p, button, footer, input, option {
     font-family: 'Lato', sans-serif;
 }
 
-button, .recipe-source, form, #search-result, legend, div, #listitem, img {
+.button, button {
+    background: rgb(255, 108, 55);
+    border: 0px;
+}
+
+.button:hover, button:hover{
+    cursor: pointer;
+}
+
+button, .recipe-source, form, #search-result, legend, div, #listitem, img, .button {
     border-radius: 6px;
 }
 
@@ -60,7 +69,7 @@ li {
     cursor: pointer;
   }
 
-  #listitem, footer, legend {
+  #listitem, legend {
     background-color: rgba(255, 255, 255, 0.5)
   }
 
@@ -97,7 +106,7 @@ iframe {
 .recipe-source {
     display: inline-block;
     padding: 4px;
-    background-color: blue;
+    background-color: rgb(0, 39, 0);
     color: white;
 }
 
@@ -107,4 +116,5 @@ footer {
     bottom: 0;
     width: 100%;
     text-align: center;
+    background: white;
  }
