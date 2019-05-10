@@ -50,10 +50,18 @@ li {
     cursor: pointer;
   }
 
-  div, form, h1, footer {
-      background-color: rgba(255, 255, 255, 0.5)
-      
+  div, form, h1, footer, legend {
+    background-color: rgba(255, 255, 255, 0.5)
   }
+
+.instructions, .item {
+    margin: 0px;
+}
+
+#listitem {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
 
 iframe {
     width: 80vw;
@@ -62,6 +70,14 @@ iframe {
 
 .hidden {
 	display: none;
+}
+
+#results {
+    margin-bottom: 5px;
+}
+
+.ingredientitem {
+   
 }
 
 footer {

@@ -70,7 +70,7 @@ function displayResults(responseJson) {
       ) {
         ingredients =
           ingredients +
-          `<li role="listitem">
+          `<li role="listitem" class="ingredientitem">
 					<div class="items">
 						<p class="item">${responseJson.hits[i].recipe.ingredientLines[j]}</p>
 					</div>
@@ -101,7 +101,7 @@ function displayResults(responseJson) {
 				</li>`;
       }
       $("#results-list").append(
-        `<li role="listitem">
+        `<li role="listitem" id="listitem">
 					<div id="search-result" class="search-result">
 						<a href="${
               responseJson.hits[i].recipe.url

@@ -19,7 +19,9 @@
   </head>
   <body>
     <h1>Clear the Fridge</h1>
-    <legend><p>Type in the ingredients you're looking to clear out from your kitchen, select a diet and click search.</p></legend>
+    <legend>
+        <p class="instructions">Type in the ingredients you're looking to clear out from your kitchen, select a diet and click search.</p>
+    </legend>
     <form>
       <input
         type="text"
@@ -27,8 +29,7 @@
         id="search-term"
         required
       />
-      <input type="submit" value="Search" />
-      <section id="diet">
+  <!--    <section id="diet"> -->
         <select class="diet">
           <option value="" selected>Select</option>
           <option value="balanced">Balanced</option>
@@ -38,7 +39,8 @@
           <option value="low-fat">Low-Fat</option>
           <option value="low-sodium">Low-Sodium</option>
         </select>
-      </section>
+        <input type="submit" value="Search" />
+   <!--   </section> -->
     </form>
     <p id="js-error-message" class="error-message"></p>
     <section id="results">
