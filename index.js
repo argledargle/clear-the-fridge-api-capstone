@@ -113,8 +113,9 @@ function displayResults(responseJson) {
             }" role="link" class="recipe-label-a" target="_blank"><p class="recipe-label">${
           responseJson.hits[i].recipe.label
         }</p></a>
+                       
 						<p class="recipe-source">${responseJson.hits[i].recipe.source}</p>
-						
+
 						<div class="expand-buttons">
 							<button type="button" id="show-ingredients" class="show-ingredients" data-ingredients=${i}" role="button">Ingredients</button>
 							<button type="button" id="show-health-info" class="show-health-info" data-health-info=${i}" role="button">Diet Info</button>
@@ -136,9 +137,10 @@ function displayResults(responseJson) {
 								${dietInfo}
 							</ul>
 						</section>
-                    </div>
+                    
                     <div id="grocery">
                    <button onclick="on()">Where's my nearest grocery store?</button>
+                  </div>
                   </div>
 				</li>`
       );

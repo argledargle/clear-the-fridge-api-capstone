@@ -26,8 +26,8 @@ p, button, footer, input, option {
     font-family: 'Lato', sans-serif;
 }
 
-button {
-    border-radius: 4px;
+button, .recipe-source, form, #search-result, legend, div, #listitem {
+    border-radius: 6px;
 }
 
 li {
@@ -50,12 +50,16 @@ li {
     cursor: pointer;
   }
 
-  div, form, h1, footer, legend {
+  #listitem, footer, legend {
     background-color: rgba(255, 255, 255, 0.5)
   }
 
 .instructions, .item {
     margin: 0px;
+}
+
+.item {
+    font-size: 12px;
 }
 
 #listitem {
@@ -73,11 +77,18 @@ iframe {
 }
 
 #results {
-    margin-bottom: 5px;
+    margin-bottom: 25px;
 }
 
-.ingredientitem {
-   
+#results-list {
+    padding-left: 0px;
+}
+
+.recipe-source {
+    display: inline-block;
+    padding: 4px;
+    background-color: blue;
+    color: white;
 }
 
 footer {
