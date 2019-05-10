@@ -13,18 +13,17 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    margin: auto;
+    width: 50%;
   }
 
 h1 {
     font-family: 'Permanent Marker', cursive;
+    margin-bottom: 0px;
 }
 
 p, button, footer, input, option {
     font-family: 'Lato', sans-serif;
-}
-
-div, h1, form, footer {
-    background-color: white;
 }
 
 button {
@@ -49,6 +48,11 @@ li {
     background-color: rgba(0,0,0,0.75);
     z-index: 2;
     cursor: pointer;
+  }
+
+  div, form, h1, footer {
+      background-color: rgba(255, 255, 255, 0.5)
+      
   }
 
 iframe {
