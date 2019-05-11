@@ -168,3 +168,29 @@ footer {
     text-align: center;
     background: white;
  }
+
+ .contact-info {
+    font-size: 4rem;
+    display: inline-block;
+    margin: 0px;
+}
+
+.contact-list {
+    list-style-type: none;
+}
+
+#contact-flex {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+.contact-info {
+    font-size: 40px;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+.copy {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
