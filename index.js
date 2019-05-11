@@ -24,7 +24,7 @@ function getRecipes(searchTerm, limit = 10, diet) {
   };
   if (diet != "") {
     params.diet = diet;
-  };
+  }
   const queryString = formatQueryParams(params);
   const url = edamamSearchUrl + "?" + queryString;
   fetch(url)
@@ -227,11 +227,11 @@ function watchShowHealthInfoButton() {
 // on function displays map iframe
 function on() {
   document.getElementById("overlay").style.display = "flex";
-};
+}
 // off function turns off map iframe
 function off() {
   document.getElementById("overlay").style.display = "none";
-};
+}
 
 $(watchShowIngredientsButton);
 $(watchShowHealthInfoButton);

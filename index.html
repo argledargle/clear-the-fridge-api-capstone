@@ -16,22 +16,30 @@
       rel="stylesheet"
     />
     <script src="https://developer.edamam.com/attribution/badge.js"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js" integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ" crossorigin="anonymous"></script>
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.8.1/js/all.js"
+      integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ"
+      crossorigin="anonymous"
+    ></script>
     <title>Clear the Fridge</title>
   </head>
   <body>
-    <legend>
-    <h1>Clear the Fridge</h1>
-        <p class="instructions">Type in the ingredients you're looking to clear out from your kitchen, select a diet and click search.</p>
-    
-    <form>
-      <input
-        type="text"
-        placeholder="Chicken, rice"
-        id="search-term"
-        required
-      />
-  <!--    <section id="diet"> -->
+    <legend id="instructions+input">
+      <h1>Clear the Fridge</h1>
+      <p class="instructions">
+        Type in the ingredients you're looking to clear out from your kitchen,
+        select a diet and click search.
+      </p>
+
+      <form id="input">
+        <input
+          type="text"
+          placeholder="Chicken, rice"
+          id="search-term"
+          required
+        />
+        <!--    <section id="diet"> -->
         <select class="diet">
           <option value="" selected>Select</option>
           <option value="balanced">Balanced</option>
@@ -41,10 +49,10 @@
           <option value="low-fat">Low-Fat</option>
           <option value="low-sodium">Low-Sodium</option>
         </select>
-        <input type="submit" value="Search" class="button"/>
-   <!--   </section> -->
-    </form>
-</legend>
+        <input type="submit" value="Search" class="button" />
+        <!--   </section> -->
+      </form>
+    </legend>
     <p id="js-error-message" class="error-message"></p>
     <section id="results">
       <ul id="results-list"></ul>
@@ -60,10 +68,9 @@
       >
       </iframe>
     </div>
-
     <footer>
-        <div id="edamam-badge" data-color="white"></div>
-        <p class="copy">© 2019 | Alex Peter</p>
+      <div id="edamam-badge" data-color="white"></div>
+      <p class="copy">© 2019 | Alex Peter</p>
     </footer>
   </body>
 </html>
