@@ -112,8 +112,8 @@ function displayResults(responseJson) {
 						<p class="recipe-source">${responseJson.hits[i].recipe.source}</p>
 
 						<div class="expand-buttons">
-							<button type="button" id="show-ingredients" class="show-ingredients" data-ingredients=${i}" role="button">+ Ingredients</button>
-							<button type="button" id="show-health-info" class="show-health-info" data-health-info=${i}" role="button">+ Diet Info</button>
+							<button type="button" id="show-ingredients" class="show-ingredients" data-ingredients=${i}" role="button">Ingredients</button>
+							<button type="button" id="show-health-info" class="show-health-info" data-health-info=${i}" role="button">Diet Info</button>
 						</div>
 					</div>
 					<div class="ingredients-container">
