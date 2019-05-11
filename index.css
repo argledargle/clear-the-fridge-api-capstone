@@ -13,9 +13,6 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-#content {
   margin: auto;
   max-width: 500px;
   padding: 5px;
