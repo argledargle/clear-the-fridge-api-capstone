@@ -1,9 +1,11 @@
 "use strict";
 
+//set API auth info
 const edamamSearchUrl = "https://api.edamam.com/search";
 const appId = "c8b6b757";
 const appKey = "112f88722937558772de9b30b52b63ed";
 
+//format search parameters into an API friendly format
 function formatQueryParams(params) {
   const queryItems = Object.keys(params).map(
     key => `${encodeURIComponent(key)}=${encodeURIComponent(params[key])}`
@@ -12,6 +14,7 @@ function formatQueryParams(params) {
   return queryItems.join("&");
 }
 
+//ccalls upon the API to return a json file
 function getRecipes(searchTerm, limit = 10, diet) {
   const params = {
     q: searchTerm,
@@ -21,16 +24,9 @@ function getRecipes(searchTerm, limit = 10, diet) {
   };
   if (diet != "") {
     params.diet = diet;
-  }
-
-  //console.log(params);
+  };
   const queryString = formatQueryParams(params);
-
   const url = edamamSearchUrl + "?" + queryString;
-
-
- // console.log(url);
-
   fetch(url)
     .then(response => {
       if (response.ok) {
@@ -41,7 +37,6 @@ function getRecipes(searchTerm, limit = 10, diet) {
     })
     .then(responseJson => displayResults(responseJson))
     .catch(err => {
-//      console.log(err);
       $("#js-error-message").text(
         `Search limit exceeded: 5 searches per minute. ${err.message}.`
       );
@@ -117,8 +112,8 @@ function displayResults(responseJson) {
 						<p class="recipe-source">${responseJson.hits[i].recipe.source}</p>
 
 						<div class="expand-buttons">
-							<button type="button" id="show-ingredients" class="show-ingredients" data-ingredients=${i}" role="button">Ingredients</button>
-							<button type="button" id="show-health-info" class="show-health-info" data-health-info=${i}" role="button">Diet Info</button>
+							<button type="button" id="show-ingredients" class="show-ingredients" data-ingredients=${i}" role="button">+ Ingredients</button>
+							<button type="button" id="show-health-info" class="show-health-info" data-health-info=${i}" role="button">+ Diet Info</button>
 						</div>
 					</div>
 					<div class="ingredients-container">
@@ -228,11 +223,11 @@ function watchShowHealthInfoButton() {
 // on function displays map iframe
 function on() {
   document.getElementById("overlay").style.display = "flex";
-}
+};
 // off function turns off map iframe
 function off() {
   document.getElementById("overlay").style.display = "none";
-}
+};
 
 $(watchShowIngredientsButton);
 $(watchShowHealthInfoButton);

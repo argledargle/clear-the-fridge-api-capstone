@@ -18,7 +18,7 @@ body {
     padding: 5px;
   }
 
-.container {
+.container, .error-message {
     display: block;
     max-width: 500px;
     min-width: 300px;
@@ -39,13 +39,16 @@ form {
 h1 {
     font-family: 'Permanent Marker', cursive;
     margin-bottom: 0px;
+    color: #BF3641;
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
 p, button, footer, input, option {
     font-family: 'Lato', sans-serif;
 }
 
-.button, button {
+.button, button, .error-message {
     background: #731627;
     color:#F2E399;
     border: 0px;
@@ -55,7 +58,7 @@ p, button, footer, input, option {
     cursor: pointer;
 }
 
-button, .recipe-source, form, #search-result, legend, div, #listitem, img, .button {
+button, .recipe-source, form, #search-result, legend, div, #listitem, img, .button, .error-message {
     border-radius: 6px;
 }
 
@@ -155,8 +158,7 @@ iframe {
 .recipe-source {
     display: inline-block;
     padding: 4px;
-    background-color: rgb(0, 39, 0);
-    color: white;
+    background-color: #F26D3D;
     margin-left: 5px;
     margin-top: 5px;
 }
