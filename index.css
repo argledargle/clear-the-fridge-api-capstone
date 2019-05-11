@@ -15,7 +15,8 @@ body {
   background-size: cover;
 }
 
-legend, .results {
+legend,
+.results {
   margin: auto;
   max-width: 500px;
   padding: 5px;
@@ -42,10 +43,8 @@ form {
 
 h1 {
   font-family: "Permanent Marker", cursive;
-  margin-bottom: 0px;
+  margin: 0 20%;
   color: #bf3641;
-  margin-left: 20%;
-  margin-right: 20%;
 }
 
 p,
