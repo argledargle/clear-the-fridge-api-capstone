@@ -14,7 +14,7 @@ function formatQueryParams(params) {
   return queryItems.join("&");
 }
 
-//ccalls upon the API to return a json file
+//ccalls upon the API to return a json file. Error reporting for results exceeded as well.
 function getRecipes(searchTerm, limit = 10, diet) {
   const params = {
     q: searchTerm,
@@ -42,12 +42,11 @@ function getRecipes(searchTerm, limit = 10, diet) {
       );
     });
 }
-
+//Builds out all of the HTML content from the results.
 function displayResults(responseJson) {
   $("#results-list").empty();
   $("#js-error-message").empty();
   $(".site-preview").addClass("hidden");
-//  console.log(responseJson);
 
   if (responseJson.hits.length === 0) {
     $("#js-error-message").text(
@@ -145,6 +144,8 @@ function displayResults(responseJson) {
   $("#results").removeClass("hidden");
 }
 
+//watches search form and ensures text is entered
+
 function watchSearchForm() {
   $("form").submit(event => {
     event.preventDefault();
@@ -155,11 +156,12 @@ function watchSearchForm() {
     if (searchTerm == "") {
       alert("please fill out text");
     }
-//    console.log(diet);
 
     getRecipes(searchTerm, limit, diet);
   });
 }
+
+//watches show ingredients button and makes sure content is shown
 
 function watchShowIngredientsButton() {
   $("#results-list").on("click", "#show-ingredients", event => {
@@ -190,6 +192,8 @@ function watchShowIngredientsButton() {
     }
   });
 }
+
+//watches show diet button and shows content related to that
 
 function watchShowHealthInfoButton() {
   $("#results-list").on("click", "#show-health-info", event => {
@@ -232,4 +236,3 @@ function off() {
 $(watchShowIngredientsButton);
 $(watchShowHealthInfoButton);
 $(watchSearchForm);
-// console.log("app loaded");
