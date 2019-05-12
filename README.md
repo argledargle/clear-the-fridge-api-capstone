@@ -1,6 +1,6 @@
-<h1>Clear the fridge API capstone.</h1>
+<h1>Clear the Fridge API capstone.</h1>
 <br>
-<a href="https://argledargle.github.io/clear-the-fridge-api-capstone/">Clear the fridge, live link.</a>
+<a href="https://argledargle.github.io/clear-the-fridge-api-capstone/">Clear the Fridge, live link.</a>
 <br>
 <br>
 <img src="https://github.com/argledargle/clear-the-fridge-api-capstone/blob/master/img/screenshot.png">
