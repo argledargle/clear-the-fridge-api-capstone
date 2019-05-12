@@ -133,7 +133,7 @@ function displayResults(responseJson) {
 						</section>
                     
                     <div id="grocery">
-                   <button onclick="on()">Where's my nearest grocery store?</button>
+                   <button onclick="on()">Nearest Grocery</button>
                   </div>
                   </div>
 				</li>`
