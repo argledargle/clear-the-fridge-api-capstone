@@ -22,14 +22,15 @@ legend,
   padding: 5px;
 }
 
-#health-info-list > li, #diet-info-list > li {
-    display: inline-block;
-    width: auto;
-    border: 1px solid #BF3641;
-    padding: 5px 10px;
-    margin: 5px;
-    background-color: #C4A745;
-    border-radius: 5px;
+#health-info-list > li,
+#diet-info-list > li {
+  display: inline-block;
+  width: auto;
+  border: 1px solid #bf3641;
+  padding: 5px 10px;
+  margin: 5px;
+  background-color: #c4a745;
+  border-radius: 5px;
 }
 
 .container,
@@ -54,7 +55,7 @@ form {
 h1 {
   font-family: "Permanent Marker", cursive;
   margin: 0 20%;
-  color: #932A32;
+  color: #932a32;
 }
 
 p,
@@ -68,7 +69,7 @@ option {
 .button,
 button,
 .error-message {
-  background: #932A32;
+  background: #932a32;
   color: #f2e399;
   border: 0px;
 }
@@ -189,7 +190,7 @@ iframe {
 .recipe-source {
   display: inline-block;
   padding: 4px;
-  background-color: #F4855D;
+  background-color: #f4855d;
   margin-left: 5px;
   margin-top: 5px;
 }
