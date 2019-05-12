@@ -66,6 +66,11 @@ option {
   font-family: "Lato", sans-serif;
 }
 
+.ingredients-container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 .button,
 button,
 .error-message {

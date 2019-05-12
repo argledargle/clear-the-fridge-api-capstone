@@ -126,8 +126,6 @@ function displayResults(responseJson) {
 						<section id="health-info-${i}" class="health-info hidden" role="region">
 							<ul id="health-info-list" class="health-info-list" role="list">
 								${healthInfo}
-							</ul>
-							<ul id="diet-info-list" class="diet-info-list" role="list">
 								${dietInfo}
 							</ul>
 						</section>
