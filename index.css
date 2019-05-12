@@ -74,6 +74,10 @@ button,
   border: 0px;
 }
 
+.button, button {
+    padding: 7px 10px;
+}
+
 .button:hover,
 button:hover {
   cursor: pointer;
@@ -137,7 +141,9 @@ legend {
   background-color: rgba(255, 255, 255, 0.95);
 }
 
-.instructions,
+.instructions, #input {
+    margin: 20px;
+}
 .item {
   margin: 0px;
 }
